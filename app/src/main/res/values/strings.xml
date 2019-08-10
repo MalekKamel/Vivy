@@ -1,0 +1,136 @@
+<resources>
+
+    <string name="app_name">Vivy</string>
+
+    <string name="password_is_invalid">Invalid password.</string>
+    <string name="email_taken">Email already registered.</string>
+    <string name="email_or_password_incorrect">Invalid email or password.</string>
+
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm password</string>
+
+    <string name="edit_profile">Edit Profile</string>
+    <string name="phone">Phone</string>
+    <string name="done">Done</string>
+    <string name="sign_out">Log out</string>
+
+    <string name="settings">Settings</string>
+    <string name="feedback">Feedback</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="home">Home</string>
+    <string name="confirm_logout">Really want to log out?</string>
+
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="saving">Saving…</string>
+    <string name="school_bus">School Bus</string>
+    <string name="bus_code">Bus Code</string>
+    <string name="email">Email</string>
+    <string name="search_doctor">Search a doctor</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="confirm">Confirm</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="ok">OK</string>
+    <string name="enter_mobile_to_send_password_via_sms">Please enter your phone number</string>
+    <string name="send">Send</string>
+    <string name="oops_something_wrong">OOPS, something went wrong. Please try again later.</string>
+    <string name="retry">Retry</string>
+    <string name="search">Search</string>
+    <string name="select">Select</string>
+    <string name="login">Login</string>
+    <string name="connect_to_network">Please connect to netwrok</string>
+    <string name="no_data">No data!</string>
+    <string name="about">About</string>
+    <string name="connected_to_network">Connected</string>
+    <string name="not_connected_to_network">Not connected</string>
+    <string name="loading_data">Loading…</string>
+    <string name="permit_system_overlay">Please allow drawing app overlay.</string>
+    <string name="loading_wait">Loading now…</string>
+    <string name="i_m_a_supervisor">I\'m a supervisor</string>
+    <string name="i_m_a_parent">I\'m a parent</string>
+    <string name="start">start</string>
+    <string name="bus_coming_after">Bus coming after</string>
+    <string name="today">Today</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="history">History</string>
+    <string name="we_are_ready">We Are Ready</string>
+    <string name="supervisor">Supervisor</string>
+    <string name="pickup">Pickup</string>
+    <string name="arrive">Arrive</string>
+    <string name="profile">Profile</string>
+    <string name="send_note">Send Note</string>
+    <string name="has_special_care">Has special care</string>
+    <string name="picked_up">Picked up</string>
+    <string name="directions">Directions</string>
+
+    <string name="oops_something_went_wrong">Oops, something went wrong.</string>
+
+    <string name="socket_timeout_exception">Connection too slow, check your internet connection.</string>
+    <string name="offline_internet">Internet connection appears to be offline.</string>
+    <string name="no_data_entered_yet">No data entered yet</string>
+    <string name="no_memory_free_up_space">You don\'t have enough memory, please free up space first.</string>
+    <string name="birthDate">Birth Date</string>
+    <string name="nationality">Nationality</string>
+    <string name="address">Address</string>
+    <string name="phoneNumber1">Phone No 1</string>
+    <string name="phoneNumber2">Phone No 2</string>
+    <string name="schoolCode">School Code</string>
+    <string name="boarded">Boarded</string>
+    <string name="proceed">Proceed</string>
+    <string name="cancel">Cancel</string>
+    <string name="note">Note</string>
+    <string name="write_note">Write a note</string>
+    <string name="sent_successfully">Sent successfully!</string>
+    <string name="sure_student_picked_up">Are you sure the student is picked up?</string>
+    <string name="feedback_description">Tell us about your problem or recommendation</string>
+    <string name="bus_location">Bus Location</string>
+    <string name="pickup_time">Pickup Time</string>
+    <string name="vacation">Vacation</string>
+    <string name="change_student_status">Change student status</string>
+    <string name="skip">Skip</string>
+    <string name="sure_skip_student">Are you sure you want to skip this student?</string>
+    <string name="future_date">Future Date</string>
+    <string name="delay">delay</string>
+    <string name="on_time">On Time</string>
+    <string name="history_date">History date</string>
+    <string name="forward">Forward</string>
+    <string name="return_path">Return</string>
+    <string name="shcool_code">School Code</string>
+
+    <plurals name="minutes">
+        <item quantity="one"> %d min</item>
+        <item quantity="other"> %d mins</item>
+    </plurals>
+
+    <string name="about_description">
+        <![CDATA[
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">It is an integrated platform between three important parties; School administration, School Bus Supervisor and Student&rsquo; Parent, this integration </span></span></span><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">aims to</span></span></span></span></span></p>
+<ul>
+<li>
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Minimizing the waiting time of young students on street for bus arrival</span></span></span></span></span></p>
+</li>
+<li>
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Reducing fear in parents, especially after the increase in child abduction rates in some countries</span></span></span></span></span></p>
+</li>
+<li>
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Providing necessary notifications for parents about picking up and dropping time of their children</span></span></span></span></span></p>
+</li>
+<li>
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Full control of the school administration about their buses movement</span></span></span></span></span></p>
+</li>
+<li>
+<p><a name="_GoBack"></a> <span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Providing information about adherence to deadlines for bus driver / supervisor about </span></span></span></span></span></p>
+</li>
+<li>
+<p><span style="font-family: 'Times New Roman', serif;"><span style="font-size: medium;"><span style="color: #000000;"><span style="font-family: Arial, serif;"><span style="font-size: small;">Receiving parent feedback about bus transportation services</span></span></span></span></span></p>
+</li>
+</ul>
+        ]]>
+    </string>
+    <string name="driver">Driver</string>
+    <string name="drop_off">Drop Off</string>
+    <string name="parent">Parent</string>
+
+</resources>
