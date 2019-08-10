@@ -2,14 +2,11 @@ package com.vivy.app.ui.search
 
 import androidx.lifecycle.Observer
 import com.jakewharton.rxbinding2.widget.RxTextView
+import com.sha.kamel.rxlocation.RxLocation
 import com.vivy.app.R
 import com.vivy.app.shared.data.model.SearchRequest
 import com.vivy.app.shared.rx.disposeBy
 import com.vivy.app.shared.ui.frag.BaseFrag
-import com.vivy.app.shared.util.DrawerLayoutUtil
-import com.vivy.app.shared.util.NavigationViewHelper
-import com.vivy.app.shared.util.ThreadUtil
-import com.vivy.app.shared.util.linearLayoutManager
 import com.vivy.app.ui.search.adapter.DoctorsAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.frag_search.*
@@ -17,6 +14,8 @@ import kotlinx.android.synthetic.main.include__nav_view.*
 import kotlinx.android.synthetic.main.include_recycler_view_refreshable.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.util.concurrent.TimeUnit
+import android.location.Location
+import com.vivy.app.shared.util.*
 
 
 class SearchFrag : BaseFrag<SearchVm>() {
@@ -25,6 +24,7 @@ class SearchFrag : BaseFrag<SearchVm>() {
     override var layoutId: Int = R.layout.frag_search
 
     lateinit var adapter: DoctorsAdapter
+    private var currentLocation: Location? = null
 
     override fun setupUi() {
         super.setupUi()
@@ -41,21 +41,30 @@ class SearchFrag : BaseFrag<SearchVm>() {
     private fun setupSearch() {
 
         RxTextView.textChanges(etSearch)
+                .filter {
+                    val hasLocation = currentLocation != null
+                    if (!hasLocation) {
+                        getCurrentLocation()
+                    }
+                    hasLocation
+                }
                 .debounce(200, TimeUnit.MILLISECONDS)
-//                .filter { it.isNotEmpty() }
                 .map { it.toString() }
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(AndroidSchedulers.mainThread())
-                .subscribe { searchDoctors(it)  }
+                .subscribe { searchDoctors()  }
                 .disposeBy(vm.disposables)
 
     }
 
-    private fun searchDoctors(search: String) {
+    private fun searchDoctors() {
+        val search = etSearch.textString()
+        if (search.isEmpty()) return
+
         val request = SearchRequest(
                 search = search,
-                lat = 52.534709,
-                lng = 13.3976972
+                lat = currentLocation!!.latitude,
+                lng = currentLocation!!.longitude
         )
 
         vm.searchDoctors(request)
@@ -65,6 +74,15 @@ class SearchFrag : BaseFrag<SearchVm>() {
                             rv.adapter = adapter
                             adapter.submitList(list)
                         })
+    }
+
+    private fun getCurrentLocation() {
+        RxLocation()
+                .retrieveCurrentLocation(activity)
+                .subscribe { location ->
+                    currentLocation = location
+                    searchDoctors()
+                }.disposeBy(vm.disposables)
     }
 
     private fun setupDrawerLayout() {

@@ -38,7 +38,7 @@ class MyApp : MultiDexApplication() {
     companion object {
 
         @SuppressLint("StaticFieldLeak")
-        lateinit var context: Context
+        public lateinit var context: Context
 
         @JvmStatic
         fun string(@StringRes res: Int): String {

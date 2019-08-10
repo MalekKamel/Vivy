@@ -15,7 +15,6 @@ import com.vivy.app.shared.network.exception.handler.nonhttp.NonHttpExceptionInf
 import com.vivy.app.shared.network.exception.handler.nonhttp.OutOfMemoryErrorHandler
 import com.vivy.app.shared.util.CrashlyticsUtil
 import retrofit2.HttpException
-import java.util.*
 
 /**
  * Created by Sha on 10/9/17.

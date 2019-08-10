@@ -19,8 +19,7 @@ val searchModule = module {
     viewModel { SearchVm(get()) }
 }
 
-class SearchVm(dataManager: DataManager)
-    : BaseViewModel(dataManager) {
+class SearchVm(dataManager: DataManager) : BaseViewModel(dataManager) {
 
     fun searchDoctors(request: SearchRequest): LiveData<PagedList<Doctor>> {
         val dataSource = AppItemKeyedDataSource<String, Doctor> {  it.lastKey ?: "" }

@@ -17,7 +17,8 @@
             app:popUpTo="@+id/nav_graph" />
         <action
             android:id="@+id/action_splashFrag_to_searchFrag"
-            app:destination="@id/searchFrag" />
+            app:destination="@id/searchFrag"
+            app:popUpTo="@+id/nav_graph" />
     </fragment>
 
     <fragment

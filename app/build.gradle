@@ -101,6 +101,8 @@ android {
 }
 
 dependencies {
+    testImplementation 'org.koin:koin-test:2.0.1'
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     testImplementation 'junit:junit:4.12'
     testImplementation 'pl.pragmatists:JUnitParams:1.1.1'
@@ -108,6 +110,7 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0-alpha4', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation deps.support.appCompat
     implementation deps.support.compat
@@ -115,6 +118,7 @@ dependencies {
     implementation deps.support.preference
     implementation deps.support.gridlayout
     implementation deps.support.cardView
+    implementation deps.google.locations
 
     implementation deps.multidex
     implementation deps.picasso
@@ -136,9 +140,11 @@ dependencies {
 
     implementation deps.rx.lifeCycleComponent
 
+    implementation deps.rx.permissions
+
     implementation deps.sha.navigator
     implementation deps.sha.formValidator
-
+    implementation deps.sha.rxGps
     implementation deps.sha.rxLocation
 
     implementation deps.circleImageView

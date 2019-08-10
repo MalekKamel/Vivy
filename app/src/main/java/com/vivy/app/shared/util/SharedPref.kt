@@ -1,5 +1,6 @@
 package com.vivy.app.shared.util
 
+import android.content.Context
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
 import com.vivy.app.shared.data.AuthState
@@ -9,14 +10,9 @@ import com.vivy.app.shared.util.app.MyApp
  * Created by Sha on 4/20/17.
  */
 
-class SharedPref {
+class SharedPref(private val pref: SharedPreferences) {
 
-    val pref: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(MyApp.context)
-    private var editor: SharedPreferences.Editor
-
-    init {
-        editor = pref.edit()
-    }
+    private var editor: SharedPreferences.Editor = pref.edit()
 
     private fun putString(value: String?, key: Key){
         editor.putString(key.name, value)

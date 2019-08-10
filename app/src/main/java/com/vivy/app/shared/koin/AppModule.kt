@@ -1,5 +1,6 @@
 package com.vivy.app.shared.koin
 
+import androidx.preference.PreferenceManager
 import com.vivy.app.BuildConfig
 import com.vivy.app.shared.data.DataManager
 import com.vivy.app.shared.network.ApiInterface
@@ -11,6 +12,7 @@ import com.vivy.app.shared.util.SharedPref
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -53,7 +55,10 @@ val appModule = module {
     single { TokenInterceptor(get()) }
 
 
-    single { SharedPref() }
+    single { SharedPref(get()) }
+
+    // default pref
+    single { PreferenceManager.getDefaultSharedPreferences(androidContext()) }
 
     single<SchedulerProvider> { SchedulerProviderImpl() }
 

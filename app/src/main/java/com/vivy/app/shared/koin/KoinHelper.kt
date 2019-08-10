@@ -11,11 +11,8 @@ import org.koin.core.context.startKoin
 class KoinHelper {
     companion object {
         fun start(context: Context){
-            // start Koin!
             startKoin {
-                // Android context
                 androidContext(context)
-                // modules
                 modules(listOf(
                         appModule,
                         splashModule,
