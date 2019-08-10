@@ -15,8 +15,8 @@ class TokenExpiredHandler : HttpExceptionHandler() {
     override fun handle() {
 
         // Weird!
-        // In a production code, this can't be like that at all!
-        // We must have a refresh toekn API that accepts a refresh token and returns the
+        // In a production code, this can't be implemented this way at all!
+        // We must have a refresh token API that accepts a refresh token and returns the
         // valid access token
         val request = LoginRequest(
                 username = "androidChallenge@vivy.com",

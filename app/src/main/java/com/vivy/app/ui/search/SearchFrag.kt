@@ -39,7 +39,6 @@ class SearchFrag : BaseFrag<SearchVm>() {
     }
 
     private fun setupSearch() {
-
         RxTextView.textChanges(etSearch)
                 .filter {
                     val hasLocation = currentLocation != null

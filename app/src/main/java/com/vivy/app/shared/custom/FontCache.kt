@@ -2,15 +2,15 @@ package com.vivy.app.shared.custom
 
 import android.graphics.Typeface
 import android.util.Log
+import android.util.SparseArray
 import androidx.core.content.res.ResourcesCompat
 import com.vivy.app.R
 import com.vivy.app.shared.util.app.MyApp
-import java.util.*
 
 
 object FontCache {
 
-    private val fontCache = HashMap<Int, Typeface>()
+    private val fontCache = SparseArray<Typeface>()
 
     interface Font {
         companion object {
@@ -33,7 +33,7 @@ object FontCache {
                 return null
             }
 
-            fontCache[fontRes] = typeface!!
+            fontCache.setValueAt(fontRes, typeface!!)
         }
         return typeface
     }

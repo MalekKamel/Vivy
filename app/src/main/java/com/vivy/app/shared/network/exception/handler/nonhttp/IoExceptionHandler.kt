@@ -14,7 +14,7 @@ import java.util.*
 class IoExceptionHandler : NonHttpExceptionHandler() {
 
     override fun supportedThrowables(): List<Class<*>> {
-        return Arrays.asList<Class<*>>(IOException::class.java)
+        return listOf<Class<*>>(IOException::class.java)
     }
 
     override fun handle() {

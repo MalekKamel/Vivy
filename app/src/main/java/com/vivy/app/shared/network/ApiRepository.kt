@@ -13,10 +13,10 @@ class ApiRepository(private val api: ApiInterface) {
        return api.login(userName = request.username, password = request.password)
     }
 
-    fun searchForDoctor(
+    fun searchDoctors(
             request: SearchRequest
     ): Flowable<SearchResponse> {
-        return api.searchForDoctor(
+        return api.searchDoctors(
                 search = request.search,
                 lat = request.lat,
                 lng = request.lng,

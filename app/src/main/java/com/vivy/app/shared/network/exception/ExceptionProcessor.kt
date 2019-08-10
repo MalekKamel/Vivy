@@ -5,7 +5,6 @@ import com.annimon.stream.Stream
 import com.vivy.app.R
 import com.vivy.app.shared.network.HttpExceptionUtil
 import com.vivy.app.shared.network.RetrofitUtil
-import com.vivy.app.shared.network.exception.handler.http.BadRequestHandler
 import com.vivy.app.shared.network.exception.handler.http.HttpExceptionInfo
 import com.vivy.app.shared.network.exception.handler.http.ServerErrorHandler
 import com.vivy.app.shared.network.exception.handler.http.TokenExpiredHandler
@@ -22,7 +21,7 @@ import retrofit2.HttpException
 
 class ExceptionProcessor private constructor() {
 
-    private val httpHandlers = listOf(TokenExpiredHandler(), BadRequestHandler(), ServerErrorHandler())
+    private val httpHandlers = listOf(TokenExpiredHandler(), ServerErrorHandler())
 
     private val nonHttpHandlers = listOf(IoExceptionHandler(), NoSuchElementHandler(), OutOfMemoryErrorHandler())
 

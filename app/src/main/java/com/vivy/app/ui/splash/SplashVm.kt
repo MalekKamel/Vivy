@@ -14,6 +14,4 @@ val splashModule = module {
 }
 
 class SplashVm(dataManager: DataManager)
-    : BaseViewModel(dataManager) {
-
-}
+    : BaseViewModel(dataManager)

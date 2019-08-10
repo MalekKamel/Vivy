@@ -43,16 +43,5 @@ class LoginFrag : BaseFrag<LoginVm>() {
                 }
     }
 
-/*
-
-curl -d "username=androidChallenge@vivy.com&password=88888888" --header "Content-Type: application/x-www-form-urlencoded" --header "Accept: application/json" --header "Authorization: Basic aXBob25lOmlwaG9uZXdpbGxub3RiZXRoZXJlYW55bW9yZQ==" -X POST "https://auth.staging.vivy.com/oauth/token?grant_type=password"
-
-===============
-
-curl --header "Accept: application/json" --header "Authorization: Bearer ","token_type":"bearer","refresh_token":" " -X GET "https://api.staging.vivy.com/api/users/me/doctors?search=f&lat=52.534709&lng=13.3976972"
-
- */
-
-
 }
 

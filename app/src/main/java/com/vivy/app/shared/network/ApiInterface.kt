@@ -22,7 +22,7 @@ interface ApiInterface {
     ): Flowable<LoginResponse>
 
     @GET("users/me/doctors")
-    fun searchForDoctor(
+    fun searchDoctors(
             @Query("search") search: String,
             @Query("lat") lat: Double,
             @Query("lng") lng: Double,

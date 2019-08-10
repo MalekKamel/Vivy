@@ -10,8 +10,4 @@ val loginModule = module {
 }
 
 class LoginVm(dataManager: DataManager)
-    : BaseViewModel(dataManager) {
-
-
-
-}
+    : BaseViewModel(dataManager)

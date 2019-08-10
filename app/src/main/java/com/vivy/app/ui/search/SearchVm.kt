@@ -38,7 +38,7 @@ class SearchVm(dataManager: DataManager) : BaseViewModel(dataManager) {
     private fun loadDoctors(request: SearchRequest, callback: (List<Doctor>) -> Unit) {
         loading(true)
 
-        api.searchForDoctor(request)
+        api.searchDoctors(request)
                 .compose(FlowableUtil.handleException(rxError { loadDoctors(request, callback) }))
                 .subscribe { response ->
 

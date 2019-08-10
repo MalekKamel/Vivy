@@ -2,14 +2,12 @@ package com.vivy.app.ui.search.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
-import com.squareup.picasso.Picasso
 import com.vivy.app.BuildConfig
 import com.vivy.app.R
 import com.vivy.app.shared.data.model.Doctor
 import com.vivy.app.shared.ui.adapter.BasePagedListAdapter
 import com.vivy.app.shared.ui.adapter.BaseViewHolder
 import com.vivy.app.shared.ui.view.BaseView
-import com.vivy.app.shared.util.GlideUtil
 import com.vivy.app.shared.util.app.MyApp
 import com.vivy.app.shared.util.picasso.PicassoUtil
 import kotlinx.android.synthetic.main.item_doctor.view.*

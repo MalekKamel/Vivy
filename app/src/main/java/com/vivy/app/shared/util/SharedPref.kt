@@ -1,10 +1,7 @@
 package com.vivy.app.shared.util
 
-import android.content.Context
 import android.content.SharedPreferences
-import androidx.preference.PreferenceManager
 import com.vivy.app.shared.data.AuthState
-import com.vivy.app.shared.util.app.MyApp
 
 /**
  * Created by Sha on 4/20/17.
