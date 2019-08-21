@@ -4,11 +4,12 @@ A sample for using:
  - [ ] Kotlin
  - [ ] MVVM
  - [ ] RxJava
- - [ ] Koin
  - [ ] Retrofit.
+ - [ ] Koin
+ - [ ] Koin test
  - [ ] Navigation Comoponent
  - [ ] Google Paging Library
- - [ ] Koin test
+
  
  
  ### License
