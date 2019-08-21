@@ -23,8 +23,6 @@ class MyApp : MultiDexApplication() {
 
             context = applicationContext
 
-            Fabric.with(this, Crashlytics())
-
             KoinHelper.start(this)
 
             NavigatorOptions.instance().frameLayoutId = R.id.mainFrame
