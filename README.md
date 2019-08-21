@@ -8,6 +8,7 @@ A sample for using:
  - [ ] Retrofit.
  - [ ] Navigation Comoponent
  - [ ] Google Paging Library
+ - [ ] Koin test
  
  
  ### License
