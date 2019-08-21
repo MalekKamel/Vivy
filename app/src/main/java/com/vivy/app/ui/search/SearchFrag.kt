@@ -58,7 +58,7 @@ class SearchFrag : BaseFrag<SearchVm>() {
 
     private fun searchDoctors() {
         val search = etSearch.textString()
-        if (search.isEmpty()) return
+        if (!vm.isValidSearchString(search)) return
 
         val request = SearchRequest(
                 search = search,

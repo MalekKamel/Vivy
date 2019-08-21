@@ -21,6 +21,10 @@ val searchModule = module {
 
 class SearchVm(dataManager: DataManager) : BaseViewModel(dataManager) {
 
+    fun isValidSearchString(query: String): Boolean {
+        return query.isNotEmpty()
+    }
+
     fun searchDoctors(request: SearchRequest): LiveData<PagedList<Doctor>> {
         val dataSource = AppItemKeyedDataSource<String, Doctor> {  it.lastKey ?: "" }
                 .loadInitialCallback { params ->
